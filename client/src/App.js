@@ -1,7 +1,11 @@
+import React from 'react'
+//Screen imports
+import AboutScreen from './screens/AboutScreen'
+
 function App() {
 	return (
 		<div className='App'>
-			<h1>My Portfolio</h1>
+			<AboutUs />
 		</div>
 	)
 }
