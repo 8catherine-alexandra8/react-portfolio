@@ -5,6 +5,7 @@ import GlobalStyle from './components/GlobalStyle'
 import AboutScreen from './screens/AboutScreen'
 import ContactUsScreen from './screens/AboutScreen'
 import OurWorkScreen from './screens/AboutScreen'
+import MovieDetailScreen from './screens/MovieDetailScreen'
 //Component imports
 import Nav from './components/Nav'
 //Router
@@ -19,8 +20,11 @@ function App() {
 				<Route path='/' exact>
 					<AboutUsScreen />
 				</Route>
-				<Route path='/work'>
+				<Route path='/work' exact>
 					<OurworkScreen />
+				</Route>
+				<Route path='/work/:id'>
+					<MovieDetailScreen />
 				</Route>
 				<Route path='/contact'>
 					<ContactUsScreen />
