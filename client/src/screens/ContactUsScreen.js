@@ -1,10 +1,18 @@
 import React from 'react'
+//Animations
+import { motion } from framer-motion
+import { pageAnimation } from '../animation'
 
 const ContactUsScreen = () => {
 	return (
-		<div>
-			<h1>CONTACT US</h1>
-		</div>
+		<motion.div
+			exit='exit'
+			variants={pageAnimation}
+			initial='hidden'
+			animate='show'
+			>
+				<h1>CONTACT US</h1>
+		</motion.div>
 	)
 }
 
