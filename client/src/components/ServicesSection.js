@@ -8,8 +8,9 @@ import home2 from '../img/home2.png'
 //Styles
 import { About, Description, Image } from '../styles'
 import styled from 'styled-components'
+//Animation
 import { scrollReveal } from '../animation'
-import { useScroll } from './useScroll'
+import { useScroll } from '../useScroll'
 
 const ServicesSection = () => {
 	const [ element, controls ] = useScroll()
