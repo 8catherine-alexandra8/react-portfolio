@@ -1,32 +1,32 @@
 import React from 'react'
 //Global Style
 import GlobalStyle from './components/GlobalStyle'
-//Screen imports
+//Import Screens
 import AboutScreen from './screens/AboutScreen'
-import ContactUsScreen from './screens/AboutScreen'
-import OurWorkScreen from './screens/AboutScreen'
-import MovieDetailScreen from './screens/MovieDetailScreen'
-//Component imports
+import ContactUsScreen from './screens/ContactUsScreen'
+import OurWorkScreen from './screens/OurWorkScreen'
 import Nav from './components/Nav'
+import MovieDetailScreen from './screens/MovieDetailScreen'
 //Router
 import { Switch, Route, useLocation } from 'react-router-dom'
 //Animation
 import { AnimatePresence } from 'framer-motion'
-import 
 
 function App() {
 	const location = useLocation()
+
 	return (
 		<div className='App'>
 			<GlobalStyle />
+
 			<Nav />
 			<AnimatePresence exitBeforeEnter>
 				<Switch location={location} key={location.pathname}>
 					<Route path='/' exact>
-						<AboutUsScreen />
+						<AboutScreen />
 					</Route>
 					<Route path='/work' exact>
-						<OurworkScreen />
+						<OurWorkScreen />
 					</Route>
 					<Route path='/work/:id'>
 						<MovieDetailScreen />

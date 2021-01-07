@@ -8,7 +8,7 @@ import { motion } from 'framer-motion'
 import { pageAnimation } from '../animation'
 import ScrollTop from '../components/ScrollTop'
 
-const AboutUs = () => {
+const AboutScreen = () => {
 	return (
 		<motion.div
 			exit='exit'
@@ -24,4 +24,4 @@ const AboutUs = () => {
 	)
 }
 
-export default AboutUs
+export default AboutScreen
