@@ -17,7 +17,6 @@ const AboutScreen = () => {
 			animate='show'
 		>
 			<AboutSection />
-			<ServicesSection />
 			<FaqSection />
 			<ScrollTop />
 		</motion.div>

@@ -5,12 +5,14 @@ import GlobalStyle from './components/GlobalStyle'
 import AboutScreen from './screens/AboutScreen'
 import ContactUsScreen from './screens/ContactUsScreen'
 import OurWorkScreen from './screens/OurWorkScreen'
-import Nav from './components/Nav'
 import MovieDetailScreen from './screens/MovieDetailScreen'
 //Router
 import { Switch, Route, useLocation } from 'react-router-dom'
 //Animation
 import { AnimatePresence } from 'framer-motion'
+//Components
+import Nav from './components/Nav'
+import Footer from './components/Footer'
 
 function App() {
 	const location = useLocation()
@@ -36,6 +38,7 @@ function App() {
 					</Route>
 				</Switch>
 			</AnimatePresence>
+			<Footer />
 		</div>
 	)
 }

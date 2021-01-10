@@ -49,7 +49,7 @@ const OurWork = () => {
 				animate={controls2}
 				initial='hidden'
 			>
-				<h2>The Racer</h2>
+				<motion.h2 variants={fade}>The Racer</motion.h2>
 				<motion.div variants={lineAnim} className='line' />
 				<Link to='/work/the-racer'>
 					<motion.img variants={photoAnim} src={theracer} alt='theracer' />
@@ -62,7 +62,7 @@ const OurWork = () => {
 				animate={controls3}
 				initial='hidden'
 			>
-				<h2>Good Times</h2>
+				<motion.h2 variants={fade}>Good Times</motion.h2>
 				<motion.div variants={lineAnim} className='line' />
 				<Link to='/work/good-times'>
 					<motion.img
@@ -92,7 +92,7 @@ const Movie = styled(motion.div)`
   padding-bottom: 10rem;
   .line {
     height: 0.5rem;
-    background: #23d997;
+    background: #0B4C5F;
     margin-bottom: 3rem;
   }
   img {

@@ -5,7 +5,7 @@ export const useScroll = () => {
 	const controls = useAnimation()
 	const [ element, view ] = useInView({
 		triggerOnce : true,
-		threshold   : 0.3
+		threshold   : 0.4
 	})
 	if (view) {
 		controls.start('show')

@@ -14,7 +14,7 @@ html{
 }
 body{
     background: #1b1b1b;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
 }
 button{
@@ -22,13 +22,13 @@ button{
     font-size: 1.1.rem;
     cursor: pointer;
     padding: 1rem 2rem;
-    border: 3px solid #23d997;
+    border: 3px solid #0B4C5F;
     background: transparent;
     color: white;
     transition: all 0.5s ease;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto', sans-serif;
     &:hover{
-        background-color: #23d997;
+        background-color: #0B4C5F;
         color: white;
     }
 }
@@ -40,22 +40,27 @@ button{
         color: white;
     }
     h4{
-        font-weight: bold;
-        font-size: 2rem;
-       
+        font-weight: normal;
+        font-size: 1.7rem;
+        &:hover{
+            color: #E9FA03;
+        }
     }
     a{
         font-size: 1.1rem;
     }
     span{
         font-weight: bold;
-        color:#23d997;
+        color: #0B4C5F;
     }
     p{
         padding: 3rem 0rem;
         color: #ccc;
         font-size: 1.4rem;
         line-height: 150%;
+    }
+    ul{
+        list-style: none;
     }
 `
 
