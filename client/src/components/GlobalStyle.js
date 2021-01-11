@@ -46,6 +46,11 @@ button{
             color: #E9FA03;
         }
     }
+    h5{
+        font-weight: normal;
+        font-size: 1.6rem;
+        color: #1b1b1b;
+    }
     a{
         font-size: 1.1rem;
     }

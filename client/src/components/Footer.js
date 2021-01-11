@@ -39,10 +39,21 @@ const Footer = () => {
 					</li>
 				</Link>
 				<li>
+					<i class='fab fa-github' />
+				</li>
+				<li>
 					<i class='fab fa-linkedin' />
 				</li>
 				<li>
-					<i class='fab fa-github' />
+					<a
+						id='email'
+						href='mailto:catherine.alexandra.dev@gmail.com'
+						target='_blank'
+						rel='noopener noreferrer'
+						className='footer-link'
+					>
+						<i class='far fa-envelope' />
+					</a>
 				</li>
 			</StyledFooterMenu>
 			<p>&copy; 2021 Catherine Alexandra. All rights reserved.</p>
@@ -62,8 +73,9 @@ const StyledFooter = styled.footer`
 	bottom: 0;
 	p {
 		display: flex;
-		padding: 10px;
 		justify-content: center;
+		padding-top: 25px;
+		padding-bottom: 0px;
 		font-size: 1rem;
 		line-height: normal;
 		color: #b8b7ad;
@@ -73,13 +85,20 @@ const StyledFooterMenu = styled.ul`
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	li {
+	li,
+	a {
 		padding: 10px;
 		font-size: 1.3rem;
 		color: #b8b7ad;
 		i {
 			font-size: 2rem;
 		}
+		i:hover {
+			font-size: 2.2.rem;
+		}
+	}
+	li:hover {
+		font-size: 1.5rem;
 	}
 	.footer-link {
 		text-decoration: none;

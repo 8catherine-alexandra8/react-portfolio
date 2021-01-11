@@ -3,7 +3,7 @@ import React from 'react'
 import GlobalStyle from './components/GlobalStyle'
 //Import Screens
 import AboutScreen from './screens/AboutScreen'
-import ContactUsScreen from './screens/ContactUsScreen'
+import ContactScreen from './screens/ContactScreen'
 import OurWorkScreen from './screens/OurWorkScreen'
 import MovieDetailScreen from './screens/MovieDetailScreen'
 //Router
@@ -34,7 +34,7 @@ function App() {
 						<MovieDetailScreen />
 					</Route>
 					<Route path='/contact'>
-						<ContactUsScreen />
+						<ContactScreen />
 					</Route>
 				</Switch>
 			</AnimatePresence>

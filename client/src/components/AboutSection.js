@@ -1,7 +1,6 @@
 import React from 'react'
-import portrait from '../img/portrait.png'
+import { Link } from 'react-router-dom'
 import portraitPlaceholder from '../img/portraitPlaceholder2.png'
-import home1 from '../img/home1.png'
 import { About, Description, Image, Hide } from '../styles'
 //Framer Motion
 import { motion } from 'framer-motion'
@@ -28,7 +27,9 @@ const AboutSection = () => {
 				<motion.p variants={fade}>
 					Take a look a look at what I've been working on, and get in touch
 				</motion.p>
-				<motion.button variants={fade}>Contact Me</motion.button>
+				<Link id='contact' to='/contact'>
+					<motion.button variants={fade}>Contact Me</motion.button>
+				</Link>
 			</Description>
 			<Image>
 				<motion.img
