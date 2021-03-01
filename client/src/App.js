@@ -4,8 +4,10 @@ import GlobalStyle from './components/GlobalStyle'
 //Import Screens
 import AboutScreen from './screens/AboutScreen'
 import ContactScreen from './screens/ContactScreen'
-import OurWorkScreen from './screens/OurWorkScreen'
-import MovieDetailScreen from './screens/MovieDetailScreen'
+import ProjectListScreen from './screens/ProjectListScreen'
+import ProjectDetailScreen from './screens/ProjectDetailScreen'
+import ResumeScreen from './screens/ResumeScreen'
+
 //Router
 import { Switch, Route, useLocation } from 'react-router-dom'
 //Animation
@@ -16,7 +18,12 @@ import Footer from './components/Footer'
 
 function App() {
 	const location = useLocation()
-
+	console.log(
+		'window vw by vh',
+		window.innerWidth,
+		'X',
+		window.innerHeight
+	)
 	return (
 		<div className='App'>
 			<GlobalStyle />
@@ -28,10 +35,13 @@ function App() {
 						<AboutScreen />
 					</Route>
 					<Route path='/work' exact>
-						<OurWorkScreen />
+						<ProjectListScreen />
 					</Route>
 					<Route path='/work/:id'>
-						<MovieDetailScreen />
+						<ProjectDetailScreen />
+					</Route>
+					<Route path='/resume'>
+						<ResumeScreen />
 					</Route>
 					<Route path='/contact'>
 						<ContactScreen />

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { About } from '../styles'
 import Toggle from './Toggle'
@@ -21,38 +22,52 @@ const FaqSection = () => {
 			<AnimateSharedLayout>
 				<Toggle title='Where can I see your work?'>
 					<div className='answer'>
-						<p>Lorem ipsum dolor sit amet.</p>
+						<p>You can find an index of projects here:</p>
+						<Link className='faq-link' to='/work'>
+							<i className='far fa-file-alt icon' /> Projects
+						</Link>
 						<p>
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-							Sequi autem accusamus ex laboriosam porro, adipisci quam
-							voluptatum magnam placeat corporis.
+							From there, click on any project that interests you to find
+							more details, including links to the deployed application and
+							its corresponding GitHub repo
 						</p>
 					</div>
 				</Toggle>
 				<Toggle title='Why should I hire you?'>
 					<div className='answer'>
-						<p>Lorem ipsum dolor sit amet.</p>
 						<p>
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-							Error, totam.
+							In my experience, it is a pleasure to work with people who
+							are passionate about, and truly enjoy, their work and I am
+							definitely one of those people. I don't have years and years
+							of experience to temper my excitement and enthusiasm.
+						</p>
+						<p>
+							Being a self-taught developer demonstrates that I'm
+							resourceful, intrinsically motivated, and I can maintain the
+							high level of discipline, and fortitude it takes to see
+							projects through, even when it's challenging.
 						</p>
 					</div>
 				</Toggle>
 				<Toggle title='May I see your resume?'>
 					<div className='answer'>
-						<p>Lorem ipsum dolor sit amet.</p>
-						<p>
-							Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-							Necessitatibus, neque.
-						</p>
+						<p>View and download here:</p>
+						<Link className='faq-link' to='/resume'>
+							<i className='far fa-file-alt icon' /> Resume
+						</Link>
 					</div>
 				</Toggle>
 				<Toggle title='What do you do for fun?'>
 					<div className='answer'>
-						<p>Lorem ipsum dolor sit amet.</p>
 						<p>
-							Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-							Necessitatibus, neque.
+							Learning is fun and I've been doing a whole lot of that
+							lately.
+						</p>
+						<p>
+							If I'm not sitting in front of the computer, you can find me
+							outside, enjoying all the beauty and adventure that Colorado
+							has to offer. My most recent hobby is gravel biking and I'd
+							like to expand that into bikepacking this year.
 						</p>
 					</div>
 				</Toggle>
@@ -84,7 +99,12 @@ const Faq = styled(About)`
     padding: 2rem 0rem;
     p {
       padding: 1rem 0rem;
-    }
+	}
+	.faq-link {
+		text-decoration: none;
+		color: white;
+		font-size: 1.5rem;
+	}
   }
 `
 

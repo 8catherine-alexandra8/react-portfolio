@@ -7,10 +7,17 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box
 }
 html{
-    @media (max-width: 1700px){
+    font-size: 65%;
+    @media (min-width: 768px){
         font-size: 75%;
     }
-    
+    @media (min-width: 1024px){
+        font-size: 100%;
+    }
+
+}
+main {
+    min-height: 100vh;
 }
 body{
     background: #1b1b1b;
@@ -33,8 +40,12 @@ button{
     }
 }
     h2{
+        font-size: 3rem;
+        @media (min-width: 768px) {
         font-weight: lighter;
         font-size: 4rem;
+    }
+
     }
     h3{
         color: white;
@@ -57,12 +68,17 @@ button{
     span{
         font-weight: bold;
         color: #0B4C5F;
+        line-height: 150%;
     }
     p{
         padding: 3rem 0rem;
         color: #ccc;
         font-size: 1.4rem;
         line-height: 150%;
+        @media (min-width: 768px) {
+        font-weight: lighter;
+        font-size: 1.2rem;
+        }
     }
     ul{
         list-style: none;

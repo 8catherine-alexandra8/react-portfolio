@@ -1,10 +1,10 @@
 /* Position and sizing of burger button */
 .bm-burger-button {
   position: fixed;
-  width: 36px;
-  height: 30px;
-  right: 36px;
-  top: 30px;
+  width: 28px;
+  height: 28px;
+  right: 28px;
+  top: 10px;
 }
 .bm-burger-button:focus {
     outline: none;
@@ -24,8 +24,8 @@
 
 /* Position and sizing of clickable cross button */
 .bm-cross-button {
-  height: 24px;
-  width: 24px;
+  height: 8px;
+  width: 8px;
 }
 
 /* Color/shape of close button cross */
@@ -40,17 +40,14 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bm-menu-wrap {
   position: fixed;
   height: 100%;
-  right: 0px;
   top: 0px;
-
 }
 
 /* General sidebar styles */
 .bm-menu {
   background: #1a1a1a;
-  padding: 2.5em 1.5em 0;
+  padding: 2.5em 1.5em 0 10.5em;
   font-size: 1.15em;
-  opacity: 90%;
 }
 
 /* Morph shape necessary with bubble or elastic */
@@ -75,9 +72,11 @@ Note: Beware of modifying this element as it can break the animations - you shou
 }
   .icon {
       color: #E9FA03;
-      padding-right: 8px;
       opacity: 100%;
       padding-right: 8px;
+  }
+  .fa-user {
+    padding-left: 2px;
   }
   .fa-file-alt {
       padding-left: 5px;
@@ -94,3 +93,30 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
 }
+
+	@media (min-width: 360px) {
+    .bm-menu-wrap {
+          width: 100px !important;
+    }
+    .bm-menu {
+        padding: 2.5em 1.5em 0 1em;
+    }
+  }
+	@media (min-width: 411px) {
+    .bm-menu {
+          opacity: 95%;
+    }
+  }
+  	@media (min-width: 768px) {
+    .bm-menu {
+          opacity: 90%;
+    }
+        .bm-menu-wrap {
+          width: 150px !important;
+    }
+  }
+  @media (min-width: 1024px) {
+  .bm-burger-button {
+    top: 20px;
+  }
+  }

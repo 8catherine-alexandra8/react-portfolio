@@ -2,30 +2,36 @@ import styled from 'styled-components'
 import { motion } from 'framer-motion'
 
 export const About = styled(motion.div)`
-  min-height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 5rem 10rem;
-  color: white;
-
-  @media (max-width: 1300px) {
-    display: block;
-    padding: 2rem 2rem;
-    text-align: center;
-  }
+	display: block;
+	padding: 2rem 2rem;
+	text-align: center;
+	color: white;
+	min-height: 90vh;
+	margin-top: 8vh;
+  	@media (min-width: 1200px) {
+  		display: flex;
+  		align-items: center;
+  		justify-content: space-between;
+  		padding: 5rem 10rem;
+  	}
 `
 export const Description = styled.div`
-	flex: 1;
-	padding-right: 5rem;
-	h2 {
-		font-weight: lighter;
+	padding: 0;
+	button {
+		margin: 2rem 0rem 5rem 0rem;
 	}
-	@media (max-width: 1300px) {
-		padding: 0;
-		button {
-			margin: 2rem 0rem 5rem 0rem;
+	span {
+		text-shadow: 2px 2px 4px #000000;
+	}
+	@media (min-width: 768px) {
+		p {
+			font-size: 1.6rem;
 		}
+	}
+	@media (min-width: 1200px) {
+		flex: 1;
+		padding-right: 5rem;
+		font-weight: lighter;
 	}
 `
 export const Image = styled.div`
@@ -33,60 +39,26 @@ export const Image = styled.div`
 	overflow: hidden;
 	img {
 		width: 100%;
-		height: 80vh;
 		object-fit: scale-down;
-		@media (max-width: 1300px) {
-			object-fit: contain;
-		}
+	}
+	@media (min-width: 540px) {
+		height: 60vh;
+		max-width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	@media (min-width: 768px) {
+		height: 70vh;
+		max-width: 60%;
+	}
+	@media (min-width: 1024px) {
+		max-width: 50%;
+	}
+	@media (min-width: 1400px) {
+		max-width: 500px;
+		padding-left: 7%;
+		padding-top: 2%;
 	}
 `
 
 export const Hide = styled.div`overflow: hidden;`
-
-// export const burgerStyles = {
-// 	bmBurgerButton    : {
-// 		position : 'fixed',
-// 		width    : '36px',
-// 		height   : '30px',
-// 		right    : '36px',
-// 		top      : '36px'
-// 	},
-// 	bmBurgerBars      : {
-// 		background : 'white'
-// 	},
-// 	bmBurgerBarsHover : {
-// 		background : '#a90000'
-// 	},
-// 	bmCrossButton     : {
-// 		height : '24px',
-// 		width  : '24px'
-// 	},
-// 	bmCross           : {
-// 		background : '#bdc3c7'
-// 	},
-
-// 	bmMenuWrap        : {
-// 		position : 'fixed',
-// 		height   : '100%'
-// 	},
-// 	bmMenu            : {
-// 		background : '#373a47',
-// 		padding    : '2.5em 1.5em 0',
-// 		fontSize   : '1.15em'
-// 	},
-// 	bmMorphShape      : {
-// 		fill : '#373a47'
-// 	},
-// 	bmItemList        : {
-// 		color   : '#b8b7ad',
-// 		padding : '0.8em'
-// 	},
-// 	bmItem            : {
-// 		display        : 'block',
-// 		textDecoration : 'none',
-// 		color          : '#b8b7ad'
-// 	},
-// 	bmOverlay         : {
-// 		background : 'rgba(0, 0, 0, 0.3)'
-// 	}
-// }

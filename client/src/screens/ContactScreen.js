@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import ScrollTop from '../components/ScrollTop'
+
 //Animations
 import { motion } from 'framer-motion'
 import { pageAnimation, titleAnim } from '../animation'
@@ -34,9 +36,10 @@ const ContactScreen = () => {
 			animate='show'
 			style={{ background: '#fff' }}
 		>
+			<ScrollTop />
 			<Title>
 				<Hide>
-					<motion.h5 variants={titleAnim}>Email:</motion.h5>
+					<motion.h5 variants={titleAnim}>Email</motion.h5>
 				</Hide>
 			</Title>
 			<a
@@ -45,12 +48,12 @@ const ContactScreen = () => {
 				target='_blank'
 				rel='noopener noreferrer'
 			>
-				<i class='far fa-envelope' />
+				<i className='far fa-envelope' />
 			</a>
 
 			<Title>
 				<Hide>
-					<motion.h5 variants={titleAnim}>Send a message:</motion.h5>
+					<motion.h5 variants={titleAnim}>Send a message</motion.h5>
 				</Hide>
 			</Title>
 			<Hide>
@@ -69,7 +72,11 @@ const ContactScreen = () => {
 						name='message'
 						placeholder='Your message'
 					/>
-					{status === 'SUCCESS' ? <p>Thanks!</p> : <button>Submit</button>}
+					{status === 'SUCCESS' ? (
+						<p>Thanks!</p>
+					) : (
+						<button className='form-button'>Submit</button>
+					)}
 					{status === 'ERROR' && <p>Ooops! There was an error.</p>}
 				</Form>
 			</Hide>
@@ -77,6 +84,10 @@ const ContactScreen = () => {
 	)
 }
 const ContactStyle = styled(motion.div)`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 8vh;
   padding: 5rem 10rem;
   color: #353535;
   min-height: 90vh;
@@ -85,7 +96,8 @@ const ContactStyle = styled(motion.div)`
 	  color:#0B4C5F;
   }
   i:hover {
-	  font-size: 5rem;
+	  transition: all 0.5s ease;
+	  color: #e9fa03;
   }
   @media (max-width: 1500px) {
     padding: 2rem;
@@ -104,10 +116,11 @@ const Form = styled.form`
 	display: flex;
 	flex-direction: column;
 	background-color: #b8b7ad;
-	max-width: 50vw;
 	min-width: 250px;
 	padding: 2rem;
 	border-radius: 4px;
+	margin-left: auto;
+	margin-right: auto;
 	input {
 		width: 100%;
 		padding: .8rem 1.3rem;
@@ -126,72 +139,30 @@ const Form = styled.form`
 		border: 1px solid #353535;
 		resize: none;
 	}
+	.form-button {
+		background-color: #0b4c5f;
+		&:hover {
+			background-color: #e9fa03;
+			border: 3px solid #e9fa03;
+			color: #353535;
+		}
+	}
+	@media (min-width: 360px) {
+		width: 300px;
+		padding: 2.8em;
+	}
+	@media (min-width: 411px) {
+		width: 350px;
+		padding: 3em;
+	}
+	@media (min-width: 540px) {
+		width: 450px;
+		padding: 3.5em;
+	}
+	@media (min-width: 768px) {
+		textarea {
+			height: 250px;
+		}
+	}
 `
 export default ContactScreen
-// 		<ContactStyle
-// 			exit='exit'
-// 			variants={pageAnimation}
-// 			initial='hidden'
-// 			animate='show'
-// 			style={{ background: '#fff' }}
-// 		>
-// 			<Title>
-// 				<Hide>
-// 					<motion.h2 variants={titleAnim}>Get in touch.</motion.h2>
-// 				</Hide>
-// 			</Title>
-// 			<div>
-// 				<Hide>
-// 					<Social variants={titleAnim}>
-// 						<Circle />
-// 						<h2>Send Us A Message</h2>
-// 					</Social>
-// 				</Hide>
-// 				<Hide>
-// 					<Social variants={titleAnim}>
-// 						<Circle />
-// 						<h2>Send an email.</h2>
-// 					</Social>
-// 				</Hide>
-// 				<Hide>
-// 					<Social variants={titleAnim}>
-// 						<Circle />
-// 						<h2>Social Media</h2>
-// 					</Social>
-// 				</Hide>
-// 			</div>
-// 		</ContactStyle>
-// 	)
-
-// const ContactStyle = styled(motion.div)`
-//   padding: 5rem 10rem;
-//   color: #353535;
-//   min-height: 90vh;
-//   @media (max-width: 1500px) {
-//     padding: 2rem;
-//     font-size: 1rem;
-//   }
-// `
-// const Title = styled.div`
-// 	margin-bottom: 4rem;
-// 	color: black;
-// 	@media (max-width: 1500px) {
-// 		margin-top: 5rem;
-// 	}
-// `
-
-// const Circle = styled.div`
-// 	border-radius: 50%;
-// 	width: 3rem;
-// 	height: 3rem;
-// 	background: #353535;
-// `
-// const Social = styled(motion.div)`
-//   display: flex;
-//   align-items: center;
-//   h2 {
-//     margin: 2rem;
-//   }
-// `
-
-// export default ContactUs

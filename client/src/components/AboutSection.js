@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import portraitPlaceholder from '../img/portraitPlaceholder2.png'
+import portrait from '../img/smileSmaller.png'
 import { About, Description, Image, Hide } from '../styles'
 //Framer Motion
 import { motion } from 'framer-motion'
@@ -34,7 +34,7 @@ const AboutSection = () => {
 			<Image>
 				<motion.img
 					variants={photoAnim}
-					src={portraitPlaceholder}
+					src={portrait}
 					alt='portrait of developer'
 				/>
 			</Image>
@@ -42,7 +42,5 @@ const AboutSection = () => {
 		</About>
 	)
 }
-
-//Styled Components
 
 export default AboutSection

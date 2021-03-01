@@ -39,10 +39,25 @@ const Footer = () => {
 					</li>
 				</Link>
 				<li>
-					<i class='fab fa-github' />
+					<a
+						id='github-link'
+						href='https://github.com/8catherine-alexandra8'
+						target='_blank'
+						rel='noreferrer'
+						className='footer-link'
+					>
+						<i className='fab fa-github external-link' />
+					</a>
 				</li>
 				<li>
-					<i class='fab fa-linkedin' />
+					<a
+						id='linkedin-link'
+						href='https://www.linkedin.com/in/catherine-alexandra-b595a957/'
+						targer='_blank'
+						className='footer-link'
+					>
+						<i className='fab fa-linkedin external-link' />
+					</a>
 				</li>
 				<li>
 					<a
@@ -52,7 +67,7 @@ const Footer = () => {
 						rel='noopener noreferrer'
 						className='footer-link'
 					>
-						<i class='far fa-envelope' />
+						<i className='far fa-envelope external-link' />
 					</a>
 				</li>
 			</StyledFooterMenu>
@@ -83,25 +98,29 @@ const StyledFooter = styled.footer`
 `
 const StyledFooterMenu = styled.ul`
 	display: flex;
-	justify-content: space-around;
+	flex-direction: row;
+	justify-content: space-evenly;
 	align-items: center;
-	li,
-	a {
+	flex-wrap: wrap;
+
+	li {
 		padding: 10px;
 		font-size: 1.3rem;
 		color: #b8b7ad;
 		i {
 			font-size: 2rem;
+			color: #b8b7ad;
 		}
 		i:hover {
-			font-size: 2.2.rem;
+			color: #e9fa03;
+			transition: all 0.5s ease;
 		}
 	}
 	li:hover {
-		font-size: 1.5rem;
+		color: #e9fa03 !important;
+		transition: all 0.5s ease !important;
 	}
 	.footer-link {
 		text-decoration: none;
 	}
 `
-//		;
